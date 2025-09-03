@@ -6,7 +6,8 @@ Path("data/raw").mkdir(parents=True, exist_ok=True)
 sucursales = ["TALCA","CURICO","LINARES","PARRAL"]
 segmentos = ["TRADICIONAL","MAYORISTA","OTROS"]
 canales = ["MODERNO","KKAA","HORECA","TT_RESTO"]
-meses = pd.period_range("2024-01", "2024-12", freq="M").astype(str)
+meses = pd.date_range("2024-01-01", "2024-12-31", freq="M").strftime("%Y-%m")
+
 
 rows = []
 cliente_id = 100000
